@@ -1,32 +1,15 @@
-/* รีเซ็ต CSS เพื่อลดปัญหาการแสดงผลต่าง ๆ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0;
-}
-
 .centered-text {
-    font-size: 10vw; /* ปรับขนาดตามความกว้างของหน้าจอ */
+    font-size: 10vw;
     color: #333;
     text-align: center;
+    animation: moveText 5s linear infinite alternate;
 }
 
-/* Media query สำหรับหน้าจอขนาดเล็ก (มือถือ) */
-@media (max-width: 600px) {
-    .centered-text {
-        font-size: 20vw; /* ปรับขนาดให้ใหญ่ขึ้นสำหรับหน้าจอมือถือ */
+@keyframes moveText {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(50%);
     }
 }
